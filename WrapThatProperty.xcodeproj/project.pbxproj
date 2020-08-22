@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		9523DC5224F0F13E009FFBE8 /* WrapThatProperty.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9523DC4824F0F13D009FFBE8 /* WrapThatProperty.framework */; };
 		9523DC5924F0F13E009FFBE8 /* WrapThatProperty.h in Headers */ = {isa = PBXBuildFile; fileRef = 9523DC4B24F0F13D009FFBE8 /* WrapThatProperty.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9578C8A224F0F42300DF9FF6 /* MonitoredValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9578C8A124F0F42300DF9FF6 /* MonitoredValue.swift */; };
+		9578C8A724F0F63F00DF9FF6 /* MonitoredValueTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9578C8A624F0F63F00DF9FF6 /* MonitoredValueTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,6 +29,9 @@
 		9523DC4C24F0F13D009FFBE8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9523DC5124F0F13E009FFBE8 /* WrapThatPropertyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WrapThatPropertyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9523DC5824F0F13E009FFBE8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9578C8A124F0F42300DF9FF6 /* MonitoredValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonitoredValue.swift; sourceTree = "<group>"; };
+		9578C8A624F0F63F00DF9FF6 /* MonitoredValueTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonitoredValueTests.swift; sourceTree = "<group>"; };
+		9578C8A824F0F6C800DF9FF6 /* WrapThatPropertyTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WrapThatPropertyTests-Bridging-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +74,7 @@
 		9523DC4A24F0F13D009FFBE8 /* WrapThatProperty */ = {
 			isa = PBXGroup;
 			children = (
+				9578C89D24F0F2BF00DF9FF6 /* BasicWrappers */,
 				9523DC4B24F0F13D009FFBE8 /* WrapThatProperty.h */,
 				9523DC4C24F0F13D009FFBE8 /* Info.plist */,
 			);
@@ -78,9 +84,43 @@
 		9523DC5524F0F13E009FFBE8 /* WrapThatPropertyTests */ = {
 			isa = PBXGroup;
 			children = (
+				9578C89E24F0F2CB00DF9FF6 /* BasicWrappersTests */,
 				9523DC5824F0F13E009FFBE8 /* Info.plist */,
+				9578C8A824F0F6C800DF9FF6 /* WrapThatPropertyTests-Bridging-Header.h */,
 			);
 			path = WrapThatPropertyTests;
+			sourceTree = "<group>";
+		};
+		9578C89D24F0F2BF00DF9FF6 /* BasicWrappers */ = {
+			isa = PBXGroup;
+			children = (
+				9578C89F24F0F40200DF9FF6 /* Monitoring */,
+			);
+			path = BasicWrappers;
+			sourceTree = "<group>";
+		};
+		9578C89E24F0F2CB00DF9FF6 /* BasicWrappersTests */ = {
+			isa = PBXGroup;
+			children = (
+				9578C8A024F0F40900DF9FF6 /* Monitoring */,
+			);
+			path = BasicWrappersTests;
+			sourceTree = "<group>";
+		};
+		9578C89F24F0F40200DF9FF6 /* Monitoring */ = {
+			isa = PBXGroup;
+			children = (
+				9578C8A124F0F42300DF9FF6 /* MonitoredValue.swift */,
+			);
+			path = Monitoring;
+			sourceTree = "<group>";
+		};
+		9578C8A024F0F40900DF9FF6 /* Monitoring */ = {
+			isa = PBXGroup;
+			children = (
+				9578C8A624F0F63F00DF9FF6 /* MonitoredValueTests.swift */,
+			);
+			path = Monitoring;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -144,9 +184,11 @@
 				TargetAttributes = {
 					9523DC4724F0F13D009FFBE8 = {
 						CreatedOnToolsVersion = 12.0;
+						LastSwiftMigration = 1200;
 					};
 					9523DC5024F0F13E009FFBE8 = {
 						CreatedOnToolsVersion = 12.0;
+						LastSwiftMigration = 1200;
 					};
 				};
 			};
@@ -191,6 +233,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9578C8A224F0F42300DF9FF6 /* MonitoredValue.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -198,6 +241,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9578C8A724F0F63F00DF9FF6 /* MonitoredValueTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -337,6 +381,7 @@
 		9523DC5D24F0F13E009FFBE8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = VXHRYWGEB4;
@@ -354,6 +399,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.prakhar.WrapThatProperty;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -362,6 +408,7 @@
 		9523DC5E24F0F13E009FFBE8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = VXHRYWGEB4;
@@ -387,6 +434,8 @@
 		9523DC6024F0F13E009FFBE8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VXHRYWGEB4;
 				INFOPLIST_FILE = WrapThatPropertyTests/Info.plist;
@@ -397,6 +446,8 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.prakhar.WrapThatPropertyTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "WrapThatPropertyTests/WrapThatPropertyTests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -405,6 +456,8 @@
 		9523DC6124F0F13E009FFBE8 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VXHRYWGEB4;
 				INFOPLIST_FILE = WrapThatPropertyTests/Info.plist;
@@ -415,6 +468,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.prakhar.WrapThatPropertyTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "WrapThatPropertyTests/WrapThatPropertyTests-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
