@@ -8,7 +8,7 @@
 import Foundation
 
 @propertyWrapper
-public struct Monitored<Value> {
+struct Monitored<Value> {
     private var value: Value
     
     public var wrappedValue: Value {

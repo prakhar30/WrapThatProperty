@@ -11,6 +11,8 @@
 		9523DC5924F0F13E009FFBE8 /* WrapThatProperty.h in Headers */ = {isa = PBXBuildFile; fileRef = 9523DC4B24F0F13D009FFBE8 /* WrapThatProperty.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		9578C8A224F0F42300DF9FF6 /* MonitoredValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9578C8A124F0F42300DF9FF6 /* MonitoredValue.swift */; };
 		9578C8A724F0F63F00DF9FF6 /* MonitoredValueTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9578C8A624F0F63F00DF9FF6 /* MonitoredValueTests.swift */; };
+		9578C8AB24F0FB1E00DF9FF6 /* InRangeValue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9578C8AA24F0FB1E00DF9FF6 /* InRangeValue.swift */; };
+		9578C8AE24F0FB3A00DF9FF6 /* InRangeValueTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9578C8AD24F0FB3A00DF9FF6 /* InRangeValueTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,6 +34,8 @@
 		9578C8A124F0F42300DF9FF6 /* MonitoredValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonitoredValue.swift; sourceTree = "<group>"; };
 		9578C8A624F0F63F00DF9FF6 /* MonitoredValueTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonitoredValueTests.swift; sourceTree = "<group>"; };
 		9578C8A824F0F6C800DF9FF6 /* WrapThatPropertyTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WrapThatPropertyTests-Bridging-Header.h"; sourceTree = "<group>"; };
+		9578C8AA24F0FB1E00DF9FF6 /* InRangeValue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InRangeValue.swift; sourceTree = "<group>"; };
+		9578C8AD24F0FB3A00DF9FF6 /* InRangeValueTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InRangeValueTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +98,7 @@
 		9578C89D24F0F2BF00DF9FF6 /* BasicWrappers */ = {
 			isa = PBXGroup;
 			children = (
+				9578C8A924F0FADC00DF9FF6 /* Maths */,
 				9578C89F24F0F40200DF9FF6 /* Monitoring */,
 			);
 			path = BasicWrappers;
@@ -102,6 +107,7 @@
 		9578C89E24F0F2CB00DF9FF6 /* BasicWrappersTests */ = {
 			isa = PBXGroup;
 			children = (
+				9578C8AC24F0FB2900DF9FF6 /* Maths */,
 				9578C8A024F0F40900DF9FF6 /* Monitoring */,
 			);
 			path = BasicWrappersTests;
@@ -121,6 +127,22 @@
 				9578C8A624F0F63F00DF9FF6 /* MonitoredValueTests.swift */,
 			);
 			path = Monitoring;
+			sourceTree = "<group>";
+		};
+		9578C8A924F0FADC00DF9FF6 /* Maths */ = {
+			isa = PBXGroup;
+			children = (
+				9578C8AA24F0FB1E00DF9FF6 /* InRangeValue.swift */,
+			);
+			path = Maths;
+			sourceTree = "<group>";
+		};
+		9578C8AC24F0FB2900DF9FF6 /* Maths */ = {
+			isa = PBXGroup;
+			children = (
+				9578C8AD24F0FB3A00DF9FF6 /* InRangeValueTests.swift */,
+			);
+			path = Maths;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,6 +255,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9578C8AB24F0FB1E00DF9FF6 /* InRangeValue.swift in Sources */,
 				9578C8A224F0F42300DF9FF6 /* MonitoredValue.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -241,6 +264,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9578C8AE24F0FB3A00DF9FF6 /* InRangeValueTests.swift in Sources */,
 				9578C8A724F0F63F00DF9FF6 /* MonitoredValueTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
